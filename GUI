@@ -1,0 +1,44 @@
+import random
+import sys
+import os
+import matplotlib
+import numpy as np
+import pylab as pl
+from tkinter import*
+
+def plot():
+
+
+    datax=[1,2,3,4,5]
+    datay=[1,4,9,16,25] #for i in range x:
+    number=0
+    #for number in datax: #data.append(x+=1)
+     #   while number<len(datax):
+      #   datax[number]=number+1
+
+    #for number in datay:
+     #   while number<len(datay):     #data.append(x+=1)
+      #    datay[number]=number+1
+
+    pl.title('Plot-Amplitude vs Time')
+    pl.xlabel('Time')
+    pl.ylabel('Amplitude')
+    pl.plot(datax,datay)
+    pl.show()
+    hold()
+
+root=Tk()
+#theLabel = Label(root, text="BTP")
+#theLabel.pack()
+
+topframe= Frame(root)
+topframe.pack()
+bottomframe= Frame(root, width= 250, height= 300)
+bottomframe.pack(side=BOTTOM)
+button1= Button(topframe,text="Plot", fg= "red", command=plot)
+button2= Button(bottomframe,text="Exit", fg= "blue", command=topframe.quit)
+button1.pack(side=LEFT)
+button2.pack(side=LEFT)
+
+root.mainloop()
+
